@@ -1,9 +1,9 @@
-const fs = require("fs");
-const input = fs.readFileSync("./input", "utf8");
+const fs = require('fs');
+const input: string = fs.readFileSync('./input', 'utf8');
 
-const calories = input
-  .split("\n\n")
-  .map((line) => line.split("\n"))
+const calories: number[] = input
+  .split('\n\n')
+  .map((line) => line.split('\n'))
   .map((i) => i.reduce((acc, i) => (acc += Number(i)), 0));
 
 const highestCalories = Math.max(...calories);
