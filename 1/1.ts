@@ -12,4 +12,4 @@ const totalOfTopThreeCalories = calories
   .slice(0, 3)
   .reduce((acc, calorie) => (acc += calorie));
 
-console.log({ highestCalories, totalOfTopThreeCalories });
+export default { part1: highestCalories, part2: totalOfTopThreeCalories };
