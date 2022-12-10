@@ -1,6 +1,6 @@
-const fs = require('fs');
-const inputs: string[] = fs.readFileSync('./input', 'utf8').split('\n');
-const grid = inputs.map((line) => line.trim().split('').map(Number));
+const fs = require("fs");
+const inputs: string[] = fs.readFileSync("./input", "utf8").split("\n");
+const grid = inputs.map((line) => line.trim().split("").map(Number));
 
 const getAfter = (
   i: number,
@@ -56,7 +56,7 @@ const findUntil = (input: number[], current: number, reverse = false) => {
     input = input.reverse();
   }
   for (let tree of input) {
-    if (!found && tree) {
+    if (!found) {
       ts.push(tree);
 
       if (tree >= current) {
